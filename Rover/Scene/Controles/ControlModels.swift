@@ -15,6 +15,12 @@ import UIKit
 enum Control {
 	
 	// MARK: Use cases
+    
+    enum SetSetting {
+        struct Request { }
+        struct Response { }
+        struct ViewModel { }
+    }
 	
 	enum Something {
 		struct Request { }

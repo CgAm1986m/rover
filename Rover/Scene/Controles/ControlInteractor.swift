@@ -11,9 +11,11 @@
 //
 
 import UIKit
+import CoreMotion
 
 protocol ControlBusinessLogic {
 	func doSomething(request: Control.Something.Request)
+    func setSetting(request: Control.SetSetting.Request)
 }
 
 protocol ControlDataStore {
@@ -26,7 +28,21 @@ class ControlInteractor: ControlBusinessLogic, ControlDataStore {
 	var worker: ControlWorker?
 	//var name: String = ""
 	
-	// MARK: Logic
+    //Accelerometer
+    let motionManager = CMMotionManager()
+    var timer: Timer = Timer()
+    
+    var accelerationX: Double = 0.0
+    var accelerationY: Double = 0.0
+    
+    var margen = 6.0
+    
+    init() {
+      
+//        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: self.updatePosition(_:))
+    }
+    
+    // MARK: Logic
 	
 	func doSomething(request: Control.Something.Request) {
 		worker = ControlWorker()
@@ -35,4 +51,40 @@ class ControlInteractor: ControlBusinessLogic, ControlDataStore {
 		let response = Control.Something.Response()
 		presenter?.presentSomething(response: response)
 	}
+    
+    func setSetting(request: Control.SetSetting.Request) {
+        self.setAccelerometer()
+    }
+    
+    //Funciones juego
+    
+    func updatePosition(timer: Timer) {
+        if let accelerometerData = motionManager.accelerometerData {
+            print(accelerometerData)
+            if let data = self.motionManager.accelerometerData {
+//                let x = data.acceleration.x
+                let y = data.acceleration.y
+                
+                if self.margen < (self.accelerationY-y) || self.margen > (self.accelerationY+y) {
+                    self.accelerationY = y
+                    self.moveRover()
+                }
+                // Use the accelerometer data in your app.
+            }
+        }
+    }
+    
+    func moveRover() {
+        
+    }
+    
+    //Funciones de configuración
+    func setAccelerometer() {
+        if self.motionManager.isAccelerometerAvailable {
+            self.motionManager.accelerometerUpdateInterval = 1.0 / 60.0  // 60 Hz
+            self.motionManager.startAccelerometerUpdates()
+        } else {
+            //aviso de problemas
+        }
+    }
 }

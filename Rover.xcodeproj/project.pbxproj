@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		2E995F122040097D008BD095 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E995F112040097D008BD095 /* AppDelegate.swift */; };
-		2E995F142040097D008BD095 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E995F132040097D008BD095 /* ViewController.swift */; };
 		2E995F172040097D008BD095 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E995F152040097D008BD095 /* Main.storyboard */; };
 		2E995F192040097E008BD095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E995F182040097D008BD095 /* Assets.xcassets */; };
 		2E995F1C2040097E008BD095 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E995F1A2040097E008BD095 /* LaunchScreen.storyboard */; };
 		2E995F272040097E008BD095 /* RoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E995F262040097E008BD095 /* RoverTests.swift */; };
 		2E995F322040097E008BD095 /* RoverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E995F312040097E008BD095 /* RoverUITests.swift */; };
+		2E995F5220400A11008BD095 /* ControlPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E995F4C20400A11008BD095 /* ControlPresenter.swift */; };
+		2E995F5320400A11008BD095 /* ControlWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E995F4D20400A11008BD095 /* ControlWorker.swift */; };
+		2E995F5420400A11008BD095 /* ControlRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E995F4E20400A11008BD095 /* ControlRouter.swift */; };
+		2E995F5520400A11008BD095 /* ControlModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E995F4F20400A11008BD095 /* ControlModels.swift */; };
+		2E995F5620400A11008BD095 /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E995F5020400A11008BD095 /* ControlViewController.swift */; };
+		2E995F5720400A11008BD095 /* ControlInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E995F5120400A11008BD095 /* ControlInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,6 @@
 /* Begin PBXFileReference section */
 		2E995F0E2040097D008BD095 /* Rover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E995F112040097D008BD095 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2E995F132040097D008BD095 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2E995F162040097D008BD095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E995F182040097D008BD095 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E995F1B2040097E008BD095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,12 @@
 		2E995F2D2040097E008BD095 /* RoverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E995F312040097E008BD095 /* RoverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverUITests.swift; sourceTree = "<group>"; };
 		2E995F332040097E008BD095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E995F4C20400A11008BD095 /* ControlPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPresenter.swift; sourceTree = "<group>"; };
+		2E995F4D20400A11008BD095 /* ControlWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlWorker.swift; sourceTree = "<group>"; };
+		2E995F4E20400A11008BD095 /* ControlRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlRouter.swift; sourceTree = "<group>"; };
+		2E995F4F20400A11008BD095 /* ControlModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlModels.swift; sourceTree = "<group>"; };
+		2E995F5020400A11008BD095 /* ControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlViewController.swift; sourceTree = "<group>"; };
+		2E995F5120400A11008BD095 /* ControlInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +107,9 @@
 		2E995F102040097D008BD095 /* Rover */ = {
 			isa = PBXGroup;
 			children = (
-				2E995F112040097D008BD095 /* AppDelegate.swift */,
-				2E995F132040097D008BD095 /* ViewController.swift */,
 				2E995F152040097D008BD095 /* Main.storyboard */,
-				2E995F182040097D008BD095 /* Assets.xcassets */,
-				2E995F1A2040097E008BD095 /* LaunchScreen.storyboard */,
-				2E995F1D2040097E008BD095 /* Info.plist */,
+				2E995F5820400A1D008BD095 /* Scene */,
+				2E995F5920400A33008BD095 /* Resource */,
 			);
 			path = Rover;
 			sourceTree = "<group>";
@@ -123,6 +130,38 @@
 				2E995F332040097E008BD095 /* Info.plist */,
 			);
 			path = RoverUITests;
+			sourceTree = "<group>";
+		};
+		2E995F4B204009D1008BD095 /* Controles */ = {
+			isa = PBXGroup;
+			children = (
+				2E995F4C20400A11008BD095 /* ControlPresenter.swift */,
+				2E995F4D20400A11008BD095 /* ControlWorker.swift */,
+				2E995F4E20400A11008BD095 /* ControlRouter.swift */,
+				2E995F4F20400A11008BD095 /* ControlModels.swift */,
+				2E995F5020400A11008BD095 /* ControlViewController.swift */,
+				2E995F5120400A11008BD095 /* ControlInteractor.swift */,
+			);
+			path = Controles;
+			sourceTree = "<group>";
+		};
+		2E995F5820400A1D008BD095 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				2E995F4B204009D1008BD095 /* Controles */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		2E995F5920400A33008BD095 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2E995F112040097D008BD095 /* AppDelegate.swift */,
+				2E995F182040097D008BD095 /* Assets.xcassets */,
+				2E995F1A2040097E008BD095 /* LaunchScreen.storyboard */,
+				2E995F1D2040097E008BD095 /* Info.plist */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E995F142040097D008BD095 /* ViewController.swift in Sources */,
+				2E995F5420400A11008BD095 /* ControlRouter.swift in Sources */,
+				2E995F5320400A11008BD095 /* ControlWorker.swift in Sources */,
+				2E995F5520400A11008BD095 /* ControlModels.swift in Sources */,
 				2E995F122040097D008BD095 /* AppDelegate.swift in Sources */,
+				2E995F5220400A11008BD095 /* ControlPresenter.swift in Sources */,
+				2E995F5720400A11008BD095 /* ControlInteractor.swift in Sources */,
+				2E995F5620400A11008BD095 /* ControlViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
